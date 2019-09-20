@@ -19,6 +19,7 @@ module.exports = {
     parallel: require('os').cpus().length > 1,
     // 启动端口
     devServer: {
+        host:'0.0.0.0',
         port: 8886,
     },
     // 生成gzip
@@ -27,6 +28,8 @@ module.exports = {
         config.entry.app = ['babel-polyfill', './src/main.js'];
         
         if (process.env.NODE_ENV === 'production') {
+            //生产去掉console.log
+            config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
             // 生产环境
             config.plugins.push(
                 new CompressionWebpackPlugin({
