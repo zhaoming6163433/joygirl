@@ -75,7 +75,6 @@ export default {
                 setTimeout(()=>{
                     this.bianshen = false;
                     this.joy_head = joy_cook_head;
-                    this.joy_foot = joy_cook_foot;
                     this.imghead = "cookiedog"
                 },1000);
 
@@ -163,11 +162,10 @@ export default {
         box-sizing: border-box;
         border-radius: 50%;
         position: relative;
-        left: 50%;
-        top: 1rem;
-        margin: 0 auto;
-        margin-top:3rem;
-        position: absolute;
+        position: fixed;
+        bottom: 25rem;
+        left: 1rem;
+        margin-left: 50%;
     }
     .talkdog:before {
         content: "";
@@ -186,9 +184,10 @@ export default {
     .mydog {
         width: 14rem;
         height: 14rem;
-        position: relative;
-        margin: 0 auto;
-        margin-top:8rem;
+        position: fixed;
+        bottom: 12rem;
+        left: -7rem;
+        margin-left: 50%;
         .imghead {
             z-index: 1;
             top: 0rem;
@@ -197,7 +196,7 @@ export default {
             width: 13rem;
         }
         .cookiedog{
-            top:-1rem;
+            top:-0.3rem;
         }
         .imgfoot {
             z-index: 1;
@@ -257,11 +256,17 @@ export default {
         line-height: 1.5rem;
         background-color: $pageback;
         border-radius: 5px;
-        margin: 0 auto;
+        position: fixed;
+        bottom: 11rem;
+        left: -3.5rem;
+        margin-left: 50%;
     }
     .mydogprogress {
         width: 14rem;
-        margin: 0 auto;
+        position: fixed;
+        bottom: 5rem;
+        left: -7rem;
+        margin-left: 50%;
         > ul > li > span {
             margin-right: 0.5rem;
             font-size: 0.6rem;

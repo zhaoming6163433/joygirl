@@ -21,7 +21,7 @@ export default {
             tada:"",
             boxwidth:14,
             boxtop:0,
-            showstartpage:true
+            showstartpage:false
         }
     },
     components: {
