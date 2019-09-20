@@ -21,7 +21,7 @@ export default {
             tada:"",
             boxwidth:14,
             boxtop:0,
-            showstartpage:false
+            showstartpage:true
         }
     },
     components: {
@@ -53,7 +53,9 @@ export default {
         }
     },
     mounted() {
-
+        if(window.location.href.indexOf("package")!=-1){
+            this.showstartpage = false;
+        }
     }
 }
 
