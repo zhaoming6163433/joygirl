@@ -13,8 +13,8 @@
           <div class="barimg shoppingcart img3"></div>
           背包
         </mt-tab-item>
-        <mt-tab-item id="share" @click="share">
-          <div class="barimg my img4"></div>
+        <mt-tab-item id="share">
+          <div class="barimg my img4" @click="share"></div>
           分享
         </mt-tab-item>
       </mt-tabbar>
@@ -60,13 +60,22 @@ export default {
       share(){
           JrBridge.callNative({
             "type":"4",
+            "shareDate":{
+                "appId":"",
+                "img":"https://pre-imlab-midas.jd.com/joygirl/static/img/joy_still_new.0bb72eee.png",
+                "link":"https://pre-imlab-midas.jd.com/joygirl",
+                "desc":"inJOY ZONE",
+                "title":"救命我变成狗了",
+                "friendesc":"inJOY ZONE",
+                "type":""
+            },
             "shareDataNew":{
                 "isLogin":"0",
                 "id":"5",
                 "linkSubtitle":"救命我变成狗了",
-                "imageUrl":"http://pre-imlab-midas.jd.com/joyboy/static/img/joy_still_new.dcfc6d32.png",
+                "imageUrl":"https://pre-imlab-midas.jd.com/joygirl/static/img/joy_still_new.0bb72eee.png",
                 "link":[
-                    "http://pre-imlab-midas.jd.com/joygirl"
+                    "https://pre-imlab-midas.jd.com/joygirl"
                 ],
                 "linkTitle":"inJOY ZONE",
                 "channels":["0","1","4","5"],
