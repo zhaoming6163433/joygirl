@@ -13,7 +13,7 @@
           <div class="barimg shoppingcart img3"></div>
           背包
         </mt-tab-item>
-        <mt-tab-item id="share">
+        <mt-tab-item id="share" @click="share">
           <div class="barimg my img4"></div>
           分享
         </mt-tab-item>
@@ -40,13 +40,12 @@ export default {
                 this.$router.push({"name":"sharkpage"})
                 break;
             case 'task':
-              
+                this.$router.push({"name":"task"})
                 break;
             case 'package':
                 this.$router.push({"name":"package"})
                 break;
             case 'share':
-              
                 break;
           }
       }
@@ -58,6 +57,26 @@ export default {
     });
   },
   methods : {
+      share(){
+          JrBridge.callNative({
+            "type":"4",
+            "shareDataNew":{
+                "isLogin":"0",
+                "id":"5",
+                "linkSubtitle":"救命我变成狗了",
+                "imageUrl":"http://pre-imlab-midas.jd.com/joyboy/static/img/joy_still_new.dcfc6d32.png",
+                "link":[
+                    "http://pre-imlab-midas.jd.com/joygirl"
+                ],
+                "linkTitle":"inJOY ZONE",
+                "channels":["0","1","4","5"],
+                "productName":"jijin_xiangqing",
+                "productId":"100487"
+            }
+        },function(res){
+            console.log('res from native=>',res);
+        });
+      }
   },
   mounted(){
     
