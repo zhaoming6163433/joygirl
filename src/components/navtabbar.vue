@@ -63,7 +63,7 @@ export default {
             "shareDate":{
                 "appId":"",
                 "img":"https://pre-imlab-midas.jd.com/joygirl/static/img/joy_still_new.0bb72eee.png",
-                "link":"https://pre-imlab-midas.jd.com/joygirl",
+                "link":"https://pre-imlab-midas.jd.com/joyboy",
                 "desc":"inJOY ZONE",
                 "title":"救命我变成狗了",
                 "friendesc":"inJOY ZONE",
@@ -75,10 +75,11 @@ export default {
                 "linkSubtitle":"救命我变成狗了",
                 "imageUrl":"https://pre-imlab-midas.jd.com/joygirl/static/img/joy_still_new.0bb72eee.png",
                 "link":[
-                    "https://pre-imlab-midas.jd.com/joygirl"
+                    "https://pre-imlab-midas.jd.com/joyboy",
+                    "https://pre-imlab-midas.jd.com/joyboy"
                 ],
                 "linkTitle":"inJOY ZONE",
-                "channels":["0","1","4","5"],
+                "channels":["0","1"],
                 "productName":"jijin_xiangqing",
                 "productId":"100487"
             }
